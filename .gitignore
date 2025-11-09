@@ -1,0 +1,15 @@
+.venv/
+venv/
+env/
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+models/
+data/
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+EOF
