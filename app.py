@@ -2,7 +2,7 @@
 This app demonstrates face detection, recognition, and verification using deep learning.
 """
 
-from flask import Flask, request, jsonify, send_file
+from flask import Flask, request, jsonify, send_file, render_template
 import cv2
 import numpy as np
 import os
@@ -415,6 +415,10 @@ def verify():
         logger.error(f"Verification error: {e}")
         return jsonify({"error": str(e)}), 500
 
+@app.route('/web')
+def web():
+    """Serve the web interface"""
+    return render_template('index.html')
 
 # ============================================
 # STEP 7: INITIALIZE AND RUN
